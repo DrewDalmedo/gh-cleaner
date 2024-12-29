@@ -12,5 +12,5 @@
     };
   };
 
-  dotenv.enable = false;
+  dotenv.enable = true;
 }
