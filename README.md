@@ -74,7 +74,7 @@ SAFE_MODE=1
 
 If `SAFE_MODE` is set to anything, it will be considered enabled. To disable `SAFE_MODE`, remove the variable from your .env file.
 
-##### Using .env outside of devenv
+#### Using .env outside of devenv
 
 If you're not using [devenv](#devenv), you'll need to manually source the .env file before running the script.
 
