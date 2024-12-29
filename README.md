@@ -74,6 +74,26 @@ SAFE_MODE=1
 
 If `SAFE_MODE` is set to anything, it will be considered enabled. To disable `SAFE_MODE`, remove the variable from your .env file.
 
+##### Using .env outside of devenv
+
+If you're not using [devenv](#devenv), you'll need to manually source the .env file before running the script.
+
+Simply run the following:
+
+```
+source .env
+```
+
+This will save the variables you've defined in your .env until you exit your current shell session.
+
+Alternatively, you could export the variables without making a .env like so:
+
+```
+export GITHUB_TOKEN=your-token-here
+```
+
+This will have the same effect as sourcing your .env file.
+
 #### Running the script
 
 To enter the [devenv](#devenv) development environment, simply run the following command:
