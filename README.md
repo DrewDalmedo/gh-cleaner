@@ -2,15 +2,23 @@
 
 Python script for deleting old Github repos
 
-## About / Why?
+## About
+
+### Background
 
 Back in 2020 I attended the Flatiron School coding bootcamp. At the time I'm writing this, it has been nearly 5 years since I went there.
 
-As part of the program, we linked our public Github accounts and forked each lesson as a Git repo from the bootcamp's own Github account. In theory, this would demonstrate our programming abilities and act as a publicly verifiable check that we actually attended and completed the bootcamp. In reality, I had over 330 repos that contained dead code and only served to bury my actual projects. I never looked at or referenced these old bootcamp repos, and they only served as padding to my actual portfolio of projects.
+As part of the program, we linked our public Github accounts and forked each lesson as a Git repo from the bootcamp's own Github account. In theory, this would demonstrate our programming abilities and act as a publicly verifiable check that we actually attended and completed the bootcamp. 
 
-In short, it was unaesthetic as hell and it made me unhappy.
+In reality, I had over 330 repos that contained dead code and buried my actual projects. I never looked at or referenced these old bootcamp repos, and they only served as padding to my actual portfolio.
 
-This Python script uses Github's API to delete repos that match a user-specified regex.
+In other words, it looked ugly and it was too much work to manually go through and delete each and every repo. Github doesn't provide a way to mass-delete repositories using its web interface, so a script was required to make the task viable.
+
+### About the Script 
+
+This Python script uses Github's API via `PyGithub` to delete repos that match a user-specified regex. This allows for the relatively quick mass-deletion of repos that match a particular pattern. 
+
+Deletion based on date was considered, but was too impercise as it could unintentionally delete non-bootcamp repos that were within the same date range. Pattern-matching with the ability to print the matched repos prior to deletion was considered a more optimal solution.
 
 ## Usage
 
@@ -33,7 +41,7 @@ options:
 
 #### devenv
 
-It's recommended that you use [devenv](https://devenv.sh) for a reproducible development environment. This should match exactly what I used locally to develop the script. Any usage outside of devenv is unsupported. 
+It's recommended that you use [devenv](https://devenv.sh) for a reproducible development environment. This should match exactly what I used locally to develop the script. Any usage of the script outside of devenv is unsupported. 
 
 If you want to create a venv with a requirements.txt, the only dependency is [PyGithub](https://github.com/PyGithub/PyGithub). 
 
