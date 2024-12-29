@@ -65,3 +65,25 @@ SAFE_MODE=1
 ```
 
 If `SAFE_MODE` is set to anything, it will be considered enabled. To disable `SAFE_MODE`, remove the variable from your .env file.
+
+#### Running the script
+
+To enter the [devenv](#devenv) development environment, simply run the following command:
+
+```
+devenv shell
+```
+
+Then, run the Python script:
+
+```
+python3 cleanup.py ...
+```
+
+Replace `...` with the arguments you'd like to use.
+
+Alternatively, you could do this all in one line:
+
+```
+devenv shell -- python3 cleanup.py ...
+```
