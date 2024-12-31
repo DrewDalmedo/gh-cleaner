@@ -51,9 +51,6 @@ def delete_repo(repo, safe_mode=False):
 def main():
     args = get_args()
     
-    if os.getenv("SAFE_MODE"):
-        safe_mode_message_sent = False
-
     if not args.patterns:
         raise ValueError("No patterns provided, please specify at least 1 regex pattern to match repositories against. See --help for more details.")
 
