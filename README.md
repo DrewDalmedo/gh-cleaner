@@ -1,4 +1,4 @@
-# Repo Reaper
+# Github Cleaner
 
 Python script for deleting old Github repos
 
